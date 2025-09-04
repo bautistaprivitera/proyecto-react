@@ -1,0 +1,5 @@
+.cardWidget{
+    background-color: #53b853;
+    display: flex;
+    justify-content: flex-end;
+}

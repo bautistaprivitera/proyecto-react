@@ -1,0 +1,39 @@
+.nav-head {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  height: 200px;
+  width: 1000px;
+}
+
+.logo {
+  padding: 0px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  width: 170px;
+  height: 120px;
+}
+
+.nav-list {
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-list li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.cart {
+  margin-left: auto;
+}
