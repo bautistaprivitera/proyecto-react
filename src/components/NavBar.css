@@ -2,14 +2,13 @@
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background-color: #4caf50;
-  height: 200px;
+  background-color: #84d387;
+  height: 100px;
   width: 1000px;
 }
 
 .logo {
   padding: 0px;
-  font-size: 1.5rem;
   font-weight: bold;
   color: white;
   width: 170px;
@@ -31,7 +30,7 @@
   cursor: pointer;
   color: white;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .cart {
