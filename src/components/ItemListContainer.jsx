@@ -1,8 +1,8 @@
 import './ItemListContainer.css'
-export default function ItemListContainer ({title}){
+export default function ItemListContainer (props){
     return (
         <div>
-            <h1>{title}</h1>
+            <h1>{props.greeting}</h1>
         </div>
     )
 }
