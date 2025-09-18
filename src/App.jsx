@@ -8,6 +8,7 @@ function App() {
     <>
       <NavBar/>
       <ItemListContainer greeting={"Bienvenidos a la tienda"}/>
+      &copy; Todos los derechos reservados NEXO MARKET
     </>
   )
 }
