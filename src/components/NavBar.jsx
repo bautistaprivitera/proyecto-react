@@ -1,6 +1,7 @@
 import './NavBar.css'
 import logo from '../assets/logo.png'
 import CardWidget from './CardWidget'
+import { Link } from 'react-router'
 export default function NavBar() {
     return (
         <nav className="nav-head">
@@ -14,7 +15,9 @@ export default function NavBar() {
             </div>
             
             <div className="cart">
+                <Link to="/cart">
                 <CardWidget />
+                </Link>
             </div>
         </nav>
     )
