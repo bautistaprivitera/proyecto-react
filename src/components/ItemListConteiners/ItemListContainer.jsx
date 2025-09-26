@@ -1,0 +1,48 @@
+import './ItemListContainer.css';
+import { useState, useEffect } from "react";
+import getProducts, { getProductsByCategory } from '../../data/mockAPI';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+export default function ItemListContainer(props) {
+const [products, setProducts] = useState([]);
+const {categParam} = useParams();
+
+useEffect( ()=>{
+    if(categParam === undefined ){
+      const promiseData = getProducts();
+      promiseData.then( (respuesta)=>{   
+        setProducts(respuesta)
+      })
+      .catch( (error) => alert(`Error ${error}`))
+    }
+    else {
+      getProductsByCategory(categParam)
+      .then( response => setProducts(response))
+    }
+  }, [categParam])
+
+
+  return (
+    <section className="product-section">
+  <h1>{props.greeting}</h1>
+  <h2>Supermercado - Productos</h2>
+  <div className="product-grid">
+    {products.map((prod) => (
+      <div className="product-card" key={prod.id}>
+        <img src={prod.img} alt={prod.title} />
+        <h3>{prod.title}</h3>
+        <p>Precio: ${prod.price}</p>
+        <p>Stock: {prod.stock}</p>
+        <Link to = {`/detalle/${prod.id}`}>
+          <button className="detail">Ver Detalle</button>
+        </Link>
+        
+      </div>
+    ))}
+  </div>
+</section>
+
+    
+  );
+}
