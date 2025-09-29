@@ -10,13 +10,13 @@ export default function NavBar() {
                     <Link to="/">
                         <img className="logo" src={logo} alt="Logo" />
                     </Link>
-                    <Link to="/category/Camisas">
+                    <Link to="/category/camisas">
                         <li className="nav-item">Camisas</li>
                     </Link>
-                    <Link to="/category/Pantalones">
+                    <Link to="/category/pantalon">
                         <li className="nav-item">Pantalones</li>
                     </Link>
-                    <Link to="/category/Sacos">
+                    <Link to="/category/sacos">
                         <li className="nav-item">Sacos</li>
                     </Link>
                 </ul>

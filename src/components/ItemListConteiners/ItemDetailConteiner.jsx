@@ -12,13 +12,13 @@ export default function ItemDetailConteiner() {
         getProductsById(idParam)
             .then(response => setProduct(response))
             .catch((error) => alert(`Error ${error}`))
-    }, [idParam])
+    }, [])
+
     if (product.loading) {
         return <h1>Cargando...</h1>;
     }
     return (
         <section className="product-section">
-            <h1>{props.greeting}</h1>
             <h2>Supermercado - Productos</h2>
             <div className="product-grid">
                 <div className="product-card" key={product.id}>

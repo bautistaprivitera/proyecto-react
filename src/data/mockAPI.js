@@ -2,24 +2,34 @@ import products from "./products";
 
 export default function getProducts() {
     return new Promise((resolve) => {
+        console.log("2. Promesa creada, procesando...")
+        setTimeout(() => resolve(products), 1500)
+    })
+}
+
+export function getProductsById(idParam) {
+    const promiseProduct = new Promise((resolve, reject) => {
+        const productRequest = products.find(prod => prod.id === Number(idParam))
+        console.log("Devolviendo producto... ", productRequest)
         setTimeout(() => {
-            resolve(products);
-        }, 1500);
-    });
-}
-
-export function getProductsById(idParam){
-    const promiseProduct = new Promise(((resolve, reject) => {
-        const productRequest = products.find( prod => prod.id === String(idParam))
-        setTimeout (() => resolve(productRequest), 1000);
-    }))
+            if (productRequest) {
+                resolve(productRequest)
+            }
+            else {
+                reject("Item no encontrado")
+            }
+        }
+            , 1000)
+    })
     return promiseProduct;
+
 }
 
-export function getProductsByCategory(categoryParam){
-    const promiseProduct = new Promise(((resolve, reject) => {
-        const productsRequest = products.filter( prod => prod.category.toLowerCase() === (categoryParam.toLowerCase))
-        setTimeout (() => resolve(productsRequest), 1000);
-    }))
+export function getProductsByCategory(categParam) {
+    const promiseProduct = new Promise((resolve, reject) => {
+        const productsRequest = products.filter(prod => prod.category === categParam)
+        console.log("Devolviendo productos según categoria... ", productsRequest)
+        setTimeout(() => resolve(productsRequest), 1000);
+    })
     return promiseProduct;
 }
