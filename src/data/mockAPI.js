@@ -10,13 +10,13 @@ export default function getProducts() {
 export function getProductsById(idParam) {
     const promiseProduct = new Promise((resolve, reject) => {
         const productRequest = products.find(prod => prod.id === Number(idParam))
-        console.log("Devolviendo producto... ", productRequest)
+        console.log("Devolviendo producto segun su ID", productRequest)
         setTimeout(() => {
             if (productRequest) {
                 resolve(productRequest)
             }
             else {
-                reject("Item no encontrado")
+                reject("Este producto no existe")
             }
         }
             , 1000)
@@ -28,7 +28,7 @@ export function getProductsById(idParam) {
 export function getProductsByCategory(categParam) {
     const promiseProduct = new Promise((resolve, reject) => {
         const productsRequest = products.filter(prod => prod.category === categParam)
-        console.log("Devolviendo productos según categoria... ", productsRequest)
+        console.log("Devolviendo productos según su categoria", productsRequest)
         setTimeout(() => resolve(productsRequest), 1000);
     })
     return promiseProduct;

@@ -11,10 +11,10 @@ export default function ItemListContainer(props) {
 
   useEffect(() => {
     if (categParam === undefined) {
-      console.log("1. Peticion de datos")
+      console.log("Pidiendo los datos")
       const promiseData = getProducts();
       promiseData.then((respuesta) => {
-        console.log("3. Datos recibidos...", respuesta)
+        console.log("Datos recibidos", respuesta)
         setProducts(respuesta)
 
       }).catch((error) => alert(`Error ${error}`))
