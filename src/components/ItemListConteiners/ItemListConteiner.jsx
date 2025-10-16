@@ -1,10 +1,11 @@
-import './ItemListContainer.css';
+import './ItemListConteiner.css';
 import { useState, useEffect } from "react";
-import getProducts, { getProductsByCategory } from '../../data/mockAPI';
+import getProducts, { getProductsByCategory } from "../../data/Firebase";
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { getProducts } from '../../data/Firebase';
 
-export default function ItemListContainer(props) {
+export default function ItemListConteiner(props) {
 
   const [products, setProducts] = useState([]);
   const { categParam } = useParams();

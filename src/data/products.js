@@ -1,6 +1,5 @@
 const products = [
   {
-    "id": 1,
     "title": "Camisa Oxford Blanca",
     "price": 85.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Camisa+Oxford+Blanca",
@@ -9,7 +8,6 @@ const products = [
     "description": "Camisa de algodón Oxford blanca, corte slim fit, ideal para eventos formales."
   },
   {
-    "id": 2,
     "title": "Camisa Celeste Seda Italiana",
     "price": 120.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Camisa+Celeste+Seda+Italiana",
@@ -18,7 +16,6 @@ const products = [
     "description": "Camisa de seda italiana en tono celeste, con botones nacarados y acabado premium."
   },
   {
-    "id": 3,
     "title": "Camisa Negra de Algodón Premium",
     "price": 95.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Camisa+Negra+de+Algodon+Premium",
@@ -27,7 +24,6 @@ const products = [
     "description": "Camisa negra elegante de algodón premium, perfecta para cenas nocturnas."
   },
   {
-    "id": 4,
     "title": "Camisa Azul Marino Clásica",
     "price": 89.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Camisa+Azul+Marino+Clasica",
@@ -36,7 +32,6 @@ const products = [
     "description": "Camisa de tono azul marino, corte recto, con costuras reforzadas."
   },
   {
-    "id": 5,
     "title": "Camisa Blanca con Puño Francés",
     "price": 130.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Camisa+Blanca+con+Puno+Frances",
@@ -45,7 +40,6 @@ const products = [
     "description": "Camisa blanca de puño francés, ideal para usar con gemelos en eventos de gala."
   },
   {
-    "id": 6,
     "title": "Pantalón de Vestir Gris Oxford",
     "price": 140.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Pantalon+de+Vestir+Gris+Oxford",
@@ -54,7 +48,6 @@ const products = [
     "description": "Pantalón de vestir gris Oxford, confeccionado en lana ligera."
   },
   {
-    "id": 7,
     "title": "Pantalón Slim Fit Negro",
     "price": 135.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Pantalon+Slim+Fit+Negro",
@@ -63,7 +56,6 @@ const products = [
     "description": "Pantalón elegante negro de corte slim fit, versátil para toda ocasión."
   },
   {
-    "id": 8,
     "title": "Pantalón Beige Elegante",
     "price": 125.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Pantalon+Beige+Elegante",
@@ -72,7 +64,6 @@ const products = [
     "description": "Pantalón de vestir beige, perfecto para climas cálidos y outfits sofisticados."
   },
   {
-    "id": 9,
     "title": "Pantalón Azul Marino Premium",
     "price": 150.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Pantalon+Azul+Marino+Premium",
@@ -81,7 +72,6 @@ const products = [
     "description": "Pantalón azul marino de corte recto con terminación italiana."
   },
   {
-    "id": 10,
     "title": "Pantalón Gris Claro Moderno",
     "price": 132.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Pantalon+Gris+Claro+Moderno",
@@ -90,7 +80,6 @@ const products = [
     "description": "Pantalón gris claro de confección europea, elegante y moderno."
   },
   {
-    "id": 11,
     "title": "Saco Azul Marino Clásico",
     "price": 320.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Saco+Azul+Marino+Clasico",
@@ -99,7 +88,6 @@ const products = [
     "description": "Saco azul marino clásico con solapa de muesca, imprescindible en cualquier armario elegante."
   },
   {
-    "id": 12,
     "title": "Saco Negro Slim Fit",
     "price": 350.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Saco+Negro+Slim+Fit",
@@ -108,7 +96,6 @@ const products = [
     "description": "Saco negro slim fit, confeccionado en lana fina, ideal para eventos formales."
   },
   {
-    "id": 13,
     "title": "Saco Gris Oxford",
     "price": 340.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Saco+Gris+Oxford",
@@ -117,7 +104,6 @@ const products = [
     "description": "Saco gris Oxford de corte europeo, con forro de seda interior."
   },
   {
-    "id": 14,
     "title": "Saco Azul Claro Moderno",
     "price": 310.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Saco+Azul+Claro+Moderno",
@@ -126,7 +112,6 @@ const products = [
     "description": "Saco azul claro con textura sutil, estilo moderno y fresco."
   },
   {
-    "id": 15,
     "title": "Saco Negro Clásico de Gala",
     "price": 400.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Saco+Negro+Clasico+de+Gala",
@@ -135,7 +120,6 @@ const products = [
     "description": "Saco negro de gala con solapa de raso, diseñado para ocasiones especiales."
   },
   {
-    "id": 16,
     "title": "Camisa Blanca Casual Premium",
     "price": 90.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Camisa+Blanca+Casual+Premium",
@@ -144,7 +128,6 @@ const products = [
     "description": "Camisa blanca de algodón casual premium, adaptable para looks semi-formales."
   },
   {
-    "id": 17,
     "title": "Pantalón Marrón Elegante",
     "price": 128.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Pantalon+Marron+Elegante",
@@ -153,7 +136,6 @@ const products = [
     "description": "Pantalón marrón de vestir con acabado mate y corte europeo."
   },
   {
-    "id": 18,
     "title": "Saco Beige Texturizado",
     "price": 330.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Saco+Beige+Texturizado",
@@ -162,7 +144,6 @@ const products = [
     "description": "Saco beige texturizado de lino, ideal para climas cálidos y eventos elegantes."
   },
   {
-    "id": 19,
     "title": "Camisa Rayas Azul y Blanca",
     "price": 105.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Camisa+Rayas+Azul+y+Blanca",
@@ -171,7 +152,6 @@ const products = [
     "description": "Camisa de rayas azul y blanca, estilo clásico renovado."
   },
   {
-    "id": 20,
     "title": "Saco Azul Príncipe de Gales",
     "price": 360.00,
     "img": "https://placehold.co/600x400/2C3E50/FFFFFF?text=Saco+Azul+Principe+de+Gales",

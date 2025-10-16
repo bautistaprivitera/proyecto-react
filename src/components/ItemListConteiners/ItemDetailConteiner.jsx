@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getProductsById } from '../../data/mockAPI'
+import { getProductsById, getProductsByCategory } from "../../data/Firebase"
 
 
 export default function ItemDetailConteiner() {
