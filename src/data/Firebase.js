@@ -23,6 +23,8 @@ const db = getFirestore(app);
   const dataDocs = productsSnapshot.docs.map(doc => {
     return {id: doc.id, ...doc.data()}
   })
+
+  return dataDocs;
   }
 
   export async function getProductsById(idParam) {

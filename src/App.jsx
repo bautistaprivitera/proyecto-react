@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartProvider } from './Context/CartContext'
 import CartConteiner from './components/CartContainer/CartConteiner'
 import { useEffect } from 'react'
-import { subirProducto } from './Firebase'
+import { subirProducto } from './data/Firebase'
 
 function App() {
 
