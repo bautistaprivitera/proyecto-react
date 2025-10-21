@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { getProductsById, getProductsByCategory } from "../../data/Firebase"
+import { cartContext } from "../../Context/CartContext";
 
 
 export default function ItemDetailContainer() {
 
     const { idParam } = useParams();
     const [product, setProduct] = useState({ loading: true });
+    const { addItems } = useContext(cartContext)
 
     useEffect(() => {
         getProductsById(idParam)
@@ -27,7 +29,7 @@ export default function ItemDetailContainer() {
                     <p>Precio: ${product.price}</p>
                     <p>Stock: {product.stock}</p>
                     <p>{product.description}</p>
-                    <button>Agregar al carrito</button>
+                    <button onClick={ () => addItems(product)}>Agregar al carrito</button>
                 </div>
 
             </div>

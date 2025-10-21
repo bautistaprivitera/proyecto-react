@@ -7,18 +7,23 @@ export default function CartContainer() {
     const [cartItems, removeItems] = useContext(cartContext);
 
     async function handlecheckout(buyer) {
-
+        
+        const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
         const newOrderConfiremed = await createOrder({buyer, cartItems, total, date: new Date()});
         console.log(newOrderConfiremed.toJSON);
 
         alert("Compra realizada con exito su id de compra es:" + newOrderConfiremed.id);
     }
 
-    if (cartItems.length === 0) {
-        return <h1>El carrito esta vacio</h1>,
-        <button>Volver a la tienda</button>
+   if (cartItems.length === 0) {
+    return (
+    <div>
+      <h1>El carrito está vacío</h1>
+      <button>Volver a la tienda</button>
+    </div>
+  );
+}
 
-    }
     return (
         <section>
             <div>

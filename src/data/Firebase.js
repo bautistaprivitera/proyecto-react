@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { collection, doc, getFirestore, getDocs, where, query, addDoc } from "firebase/firestore";
+import { collection, doc, getFirestore, getDocs, where, query, addDoc , getDoc} from "firebase/firestore";
 import products from "./products";
 
 const firebaseConfig = {
@@ -29,7 +29,7 @@ const db = getFirestore(app);
 
   export async function getProductsById(idParam) {
     const docRef = doc(db, "products", idParam);
-    const documentSnapshot = await getDocs(docRef);
+    const documentSnapshot = await getDoc(docRef);
 
     return {id: documentSnapshot.id, ...documentSnapshot.data()}
   }

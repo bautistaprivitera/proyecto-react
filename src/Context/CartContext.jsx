@@ -6,7 +6,7 @@ export function CartProvider({children}){
    const [cartItems, setCartItems] = useState([]);
 
     function addItems(newItem){
-        const quantityCoun = 1
+        const quantityCount = 1
         const newCart = structuredClone(cartItems)
         const isInCart = cartItems.some(item => item.id === newItem.id)
 
