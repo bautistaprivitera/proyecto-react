@@ -3,7 +3,7 @@ import { cartContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import { createOrder } from "../../data/Firebase";
 
-export default function CartConteiner() {
+export default function CartContainer() {
     const [cartItems, removeItems] = useContext(cartContext);
 
     async function handlecheckout(buyer) {

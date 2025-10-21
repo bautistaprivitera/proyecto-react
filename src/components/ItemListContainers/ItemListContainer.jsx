@@ -1,10 +1,10 @@
-import './ItemListConteiner.css';
+import './ItemListContainer.css';
 import { useState, useEffect } from "react";
 import { getProducts, getProductsByCategory } from "../../data/Firebase";
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-export default function ItemListConteiner(props) {
+export default function ItemListContainer(props) {
 
   const [products, setProducts] = useState([]);
   const { categParam } = useParams();

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import { getProductsById, getProductsByCategory } from "../../data/Firebase"
 
 
-export default function ItemDetailConteiner() {
+export default function ItemDetailContainer() {
 
     const { idParam } = useParams();
     const [product, setProduct] = useState({ loading: true });
