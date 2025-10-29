@@ -13,10 +13,13 @@ function App() {
 
   return (
   <div>
-    <main>
-      <CartProvider>
+    <CartProvider>
       <BrowserRouter>
+      <header>
         <NavBar/>
+      </header>
+
+        <main>
         <Routes>
           <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a la tienda"}/>} />
           <Route path="/detalle/:idParam" element={<ItemDetailContainer/>} />
@@ -24,12 +27,14 @@ function App() {
           <Route path="/cart" element={<CartContainer/>} />
           <Route path="*" element={<div><h2>Error 404: Pagina no encontrada</h2></div>} />
         </Routes>
+        </main>
+        <footer>
+          &copy; Todos los derechos reservados NEXO MARKET
+        </footer>
       </BrowserRouter>
-      </CartProvider>
-    </main>
-    <footer>
-      &copy; Todos los derechos reservados NEXO MARKET
-    </footer>
+    </CartProvider>
+      
+    
   </div>
 )
 
