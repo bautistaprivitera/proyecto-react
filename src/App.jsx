@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartProvider } from './Context/CartContext'
 import CartContainer from './components/CartContainer/CartContainer'
 import { subirProducto } from './data/Firebase'
+import Checkout from './components/CartContainer/Checkout'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/detalle/:idParam" element={<ItemDetailContainer/>} />
           <Route path="/category/:categParam" element={<ItemListContainer greeting={"Productos por categoria"}/>} />
           <Route path="/cart" element={<CartContainer/>} />
+          <Route path="/checkout" element={<Checkout/>} />
           <Route path="*" element={<div><h2>Error 404: Pagina no encontrada</h2></div>} />
         </Routes>
       </main>
