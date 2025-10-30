@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background-color: #84d387;
+  background-color: #bdbdbd;
   height: 100px;
   width: 1000px;
 }
@@ -10,7 +10,7 @@
 .logo {
   padding: 0px;
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
   width: 170px;
   height: 120px;
 }
@@ -28,7 +28,7 @@
   padding: 0;
   text-align: center;
   cursor: pointer;
-  color: white;
+  color: #000000;
   font-weight: 500;
   font-size: 20px;
 }
