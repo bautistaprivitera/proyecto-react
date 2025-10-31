@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Checkout.css"
 
-export default function Checkout() {
+export default function Checkout(props) {
 
     const [formData, setFormData] = useState({
         name: "",
@@ -27,19 +27,19 @@ export default function Checkout() {
         <div className="checkout-container">
             <form onSubmit={handleSubmit}>
                 <label>Nombre:
-                    <input name="name" onChange={handleInputChange} placeholder="nombre" />
+                    <input name="name" onChange={handleInputChange} value={formData.username} placeholder="nombre" />
                 </label>
                 <label>Apellido:
-                    <input name="apellido" onChange={handleInputChange} placeholder="apellido" />
+                    <input name="apellido" onChange={handleInputChange} value={formData.apellido} placeholder="apellido" />
                 </label>
                 <label>Email:
-                    <input name="email" onChange={handleInputChange} placeholder="@" />
+                    <input name="email" onChange={handleInputChange} value={formData.email} placeholder="@" />
                 </label>
                 <label>Telefono:
-                    <input name="telefono" onChange={handleInputChange} placeholder="2611741872" />
+                    <input name="telefono" onChange={handleInputChange} value={formData.telefono} placeholder="2611741872" />
                 </label>
-                <button type="submit">Confirmar</button>
-                <button type="button" onClick={() => setFormData({ nombre: "", apellido: "", email: "", telefono: "" })}>Cancelar</button>
+                <button type="submit" onChange={handleCheckout}>Confirmar</button>
+                <button type="button" onClick={() => setFormData({ name: "", apellido: "", email: "", telefono: "" })}>Cancelar</button>
             </form>
         </div>
     );

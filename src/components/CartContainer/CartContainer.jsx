@@ -3,6 +3,7 @@ import { cartContext } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import { createOrder } from "../../data/Firebase";
 import "./CartContainer.css";
+import Checkout from "./Checkout";
 
 export default function CartContainer() {
 
