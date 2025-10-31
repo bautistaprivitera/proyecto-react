@@ -8,6 +8,7 @@ import Checkout from "./Checkout";
 export default function CartContainer() {
 
     const [orderCreatedId, setOrderCreated] = useState(false);
+    const [showCheckout, setShowCheckout] = useState(false);
     const {cartItems, removeItems} = useContext(cartContext);
 
     async function handlecheckout(buyer) {
@@ -16,7 +17,7 @@ export default function CartContainer() {
         const newOrderConfiremed = await createOrder({buyer, cartItems, total, date: new Date()});
         console.log(newOrderConfiremed.toJSON);
 
-        alert("Compra realizada con exito su id de compra es:" + newOrderConfiremed.id);
+        alert("Compra realizada con exito su id de compra es: " + newOrderConfiremed.id);
     }
 
     if(orderCreatedId) {
@@ -38,6 +39,10 @@ export default function CartContainer() {
     );
     }
 
+    if (showCheckout) {
+        return <Checkout handleCheckout={handlecheckout} />;
+    }
+
     return (
   <section className="cartContainer">
     <h2>Tu carrito de compras:</h2>
@@ -56,8 +61,7 @@ export default function CartContainer() {
     </div>
 
     <div className="cartButtons">
-      <button onClick={handlecheckout}>Confirmar compra</button>
-      <Link to="/checkout"><button>Ir a pagar</button></Link>
+      <button onClick={()=>setShowCheckout(true)}>Ir a pagar</button>
       <Link to="/"><button>Volver a la tienda</button></Link>
     </div>
   </section>

@@ -9,7 +9,7 @@ import { subirProducto } from './data/Firebase'
 import Checkout from './components/CartContainer/Checkout'
 
 function App() {
-
+  
   subirProducto();
 
   return (

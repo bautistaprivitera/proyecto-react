@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./Checkout.css"
+import { Link } from "react-router-dom";
 
-export default function Checkout(props) {
+export default function Checkout({handleCheckout}) {
 
     const [formData, setFormData] = useState({
         name: "",
@@ -13,7 +14,7 @@ export default function Checkout(props) {
     function handleSubmit(event) {
         event.preventDefault()
         console.log(formData)
-        props.handleCheckout(formData)
+        handleCheckout(formData)
     }
 
     function handleInputChange(event) {
@@ -23,11 +24,15 @@ export default function Checkout(props) {
         newFormData[inputName] = value
         setFormData(newFormData)
     }
+
+    function handleCancel() {
+        setFormData({ name: "", apellido: "", email: "", telefono: "" });
+    }
     return (
         <div className="checkout-container">
             <form onSubmit={handleSubmit}>
                 <label>Nombre:
-                    <input name="name" onChange={handleInputChange} value={formData.username} placeholder="nombre" />
+                    <input name="name" onChange={handleInputChange} value={formData.name} placeholder="nombre" />
                 </label>
                 <label>Apellido:
                     <input name="apellido" onChange={handleInputChange} value={formData.apellido} placeholder="apellido" />
@@ -38,9 +43,12 @@ export default function Checkout(props) {
                 <label>Telefono:
                     <input name="telefono" onChange={handleInputChange} value={formData.telefono} placeholder="2611741872" />
                 </label>
-                <button type="submit" onChange={handleCheckout}>Confirmar</button>
-                <button type="button" onClick={() => setFormData({ name: "", apellido: "", email: "", telefono: "" })}>Cancelar</button>
+                <button type="submit">Confirmar compra</button>
+                <button type="button" onClick={handleCancel}>Cancelar</button>
             </form>
+            <div className="checkout-buttons">
+                <Link to="/"><button>Volver a la tienda</button></Link>
+            </div>
         </div>
     );
 }
