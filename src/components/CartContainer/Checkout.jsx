@@ -8,7 +8,7 @@ export default function Checkout({handleCheckout}) {
         name: "",
         apellido: "",
         email: "",
-        telefono: ""
+        phone: ""
     });
 
     function handleSubmit(event) {
@@ -26,7 +26,7 @@ export default function Checkout({handleCheckout}) {
     }
 
     function handleCancel() {
-        setFormData({ name: "", apellido: "", email: "", telefono: "" });
+        setFormData({ name: "", apellido: "", email: "", phone: "" });
     }
     return (
         <div className="checkout-container">
@@ -41,7 +41,7 @@ export default function Checkout({handleCheckout}) {
                     <input required name="email" onChange={handleInputChange} value={formData.email} placeholder="@" />
                 </label>
                 <label>Telefono:
-                    <input requiredname="telefono" onChange={handleInputChange} value={formData.telefono} placeholder="2611741872" />
+                    <input required  name="phone" onChange={handleInputChange}  type="tel" value={formData.phone} placeholder="2616177429" />
                 </label>
                 <button type="submit">Confirmar compra</button>
                 <button type="button" onClick={handleCancel}>Cancelar</button>

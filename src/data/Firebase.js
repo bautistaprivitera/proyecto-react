@@ -49,7 +49,7 @@ const db = getFirestore(app);
 
   export async function createOrder(orderData) {
     const orderRef = collection(db, "orders");
-    const newDoc = addDoc(orderRef, orderData);
+    const newDoc = await addDoc(orderRef, orderData);
 
     return newDoc;  
   }
