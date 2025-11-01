@@ -92,12 +92,9 @@ proyecto-react/
 
 ## 🧠 Posibles mejoras futuras
 
-🔹 Incorporar **React Router** para la navegación.  
-🔹 Agregar **autenticación con Firebase Auth**.  
 🔹 Crear un **panel de administración**.  
 🔹 Integrar un diseño con **Tailwind CSS** o **Material UI**.  
 🔹 Implementar **testing automatizado con Jest**.  
-🔹 Desplegar en **Firebase Hosting** o **Vercel**.
 
 ## 👨‍💻 Autor
 
