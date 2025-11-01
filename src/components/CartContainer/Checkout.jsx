@@ -32,16 +32,16 @@ export default function Checkout({handleCheckout}) {
         <div className="checkout-container">
             <form onSubmit={handleSubmit}>
                 <label>Nombre:
-                    <input name="name" onChange={handleInputChange} value={formData.name} placeholder="nombre" />
+                    <input required name="name" onChange={handleInputChange} value={formData.name} placeholder="nombre" />
                 </label>
                 <label>Apellido:
-                    <input name="apellido" onChange={handleInputChange} value={formData.apellido} placeholder="apellido" />
+                    <input required name="apellido" onChange={handleInputChange} value={formData.apellido} placeholder="apellido" />
                 </label>
                 <label>Email:
-                    <input name="email" onChange={handleInputChange} value={formData.email} placeholder="@" />
+                    <input required name="email" onChange={handleInputChange} value={formData.email} placeholder="@" />
                 </label>
                 <label>Telefono:
-                    <input name="telefono" onChange={handleInputChange} value={formData.telefono} placeholder="2611741872" />
+                    <input requiredname="telefono" onChange={handleInputChange} value={formData.telefono} placeholder="2611741872" />
                 </label>
                 <button type="submit">Confirmar compra</button>
                 <button type="button" onClick={handleCancel}>Cancelar</button>

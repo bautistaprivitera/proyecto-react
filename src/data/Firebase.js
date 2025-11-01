@@ -3,13 +3,15 @@ import { collection, doc, getFirestore, getDocs, where, query, addDoc , getDoc} 
 import products from "./products";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+
+  apiKey: "AIzaSyCG1mTFYq4Gw4bLjeeGYJKlrCac3IVAf-Y",
+  authDomain: "proyecto-react-6c5b3.firebaseapp.com",
+  projectId: "proyecto-react-6c5b3",
+  storageBucket: "proyecto-react-6c5b3.firebasestorage.app",
+  messagingSenderId: "606437369621",
+  appId: "1:606437369621:web:2fd55c1ddf15d24cff6b1c",
+  measurementId: "G-500CEKDBVV"
+
 };
 
 // Initialize Firebase
